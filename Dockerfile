@@ -9,4 +9,4 @@ ENV EMAIL=""
 ENV AZ_DNS_RG=""
 RUN pip3 install certbot certbot-dns-azure envsubst
 COPY policy.json.tpl azure.ini.tpl main.sh .
-ENTRYPOINT .main.sh
+ENTRYPOINT ./main.sh
