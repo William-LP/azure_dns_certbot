@@ -9,6 +9,7 @@ This docker image allows you to dynamically register a certificate for a domain 
 - Creating a CSR in the keyvault
 - Retrieving the CSR
 - Sending CSR to the CA
+- Solving ACME dns challenge
 - Merging the certificate to keyvault
 
 ## Usage
