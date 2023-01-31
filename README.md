@@ -1,5 +1,7 @@
 # Azure DNS Certbot
 
+This docker image is a wrapper for the [certbot-dns-azure library](https://certbot-dns-azure.readthedocs.io/en/latest/index.html) with the extra effort of shipping the certificate directly into an azure keyvault.
+
 ## Why and how
 
 This docker image allows you to dynamically register a certificate for a domain linked in your DNS zone and save it within a keyvault.
@@ -12,8 +14,6 @@ This docker image allows you to dynamically register a certificate for a domain 
 ## Usage
 
 You must have a service principal with `DNS Zone Contributor` on your DNS zone and `Create` certificate permissions in your keyvault's access policies.
-
-### Build it yourself
 
 ```bash
 git clone https://github.com/William-LP/azure_dns_certbot
