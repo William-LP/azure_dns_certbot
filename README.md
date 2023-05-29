@@ -17,9 +17,6 @@ This docker image allows you to dynamically register a certificate for a domain 
 You must have a service principal with `DNS Zone Contributor` on your DNS zone and `Create` certificate permissions in your keyvault's access policies.
 
 ```bash
-git clone https://github.com/William-LP/azure_dns_certbot
-cd https://github.com/William-LP/azure_dns_certbot
-docker build . -t azure_dns_certbot
 docker run \
     -e KV_NAME=<KEYVAULT NAME> \
     -e AZ_APP_ID=<APP ID> \
@@ -29,5 +26,5 @@ docker run \
     -e DOMAIN=<DOMAIN> \
     -e EMAIL=<EMAIL> \
     -e AZ_DNS_RG=<AZ DNS RG> \
-    --rm -i -t azure_dns_certbot
+    --rm ghcr.io/william-lp/azure_dns_certbot:main
 ```
